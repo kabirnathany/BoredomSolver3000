@@ -92,3 +92,18 @@ hr {
     justify-content: center;
     align-items: center;
 }
+
+#home {
+    background-color: white;
+    color: black;
+    padding: 12px 28px;
+    font-size: 16px;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
