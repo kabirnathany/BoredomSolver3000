@@ -6,7 +6,7 @@ let boardHeight = 640;
 let context;
 
 //bird
-let birdWidth = 34; //width to height ratio = 408/228 = 17/12 = 34/24
+let birdWidth = 34; 
 let birdHeight = 24;
 let birdX = boardWidth/8;
 let birdY = boardHeight/2;
@@ -21,7 +21,7 @@ let bird = {
 
 //pipes
 let pipeArray = [];
-let pipeWidth = 64; //width to height ratio = 384/3072 = 1/8 = 64/512
+let pipeWidth = 64; 
 let pipeHeight = 512;
 let pipeX = boardWidth;
 let pipeY = 0;
@@ -30,8 +30,8 @@ let topPipeImg;
 let bottomPipeImg;
 
 //physics
-let velocityX = -2; //pipes moving left speed
-let velocityY = 0; //bird jump speed
+let velocityX = -2; 
+let velocityY = 0; 
 let gravity = 0.4;
 
 let gameOver = false;
@@ -41,11 +41,7 @@ window.onload = function() {
     board = document.getElementById("game-board");
     board.height = boardHeight;
     board.width = boardWidth;
-    context = board.getContext("2d") //drawing on the board
-
-    //draw flappy bird
-    //context.fillStyle = "green";
-    //context.fillRect(bird.x, bird.y, bird.width, bird.height); 
+    context = board.getContext("2d") 
 
     //load image for bird
     birdImg = new Image();
@@ -61,7 +57,7 @@ window.onload = function() {
     bottomPipeImg.src = "./bottompipe.png";
 
     requestAnimationFrame(update);
-    setInterval(placePipes, 1500); //every 1.5 seconds
+    setInterval(placePipes, 1500); 
     document.addEventListener("keydown", moveBird);
 }
 
@@ -72,10 +68,8 @@ function update() {
     }
     context.clearRect(0, 0, board.width, board.height);
 
-    //bird
     velocityY += gravity;
-    //bird.y += velocityY;
-    bird.y = Math.max(bird.y + velocityY, 0); //aply gravity to current bird.y, limit the bird.y to top of the canvas
+    bird.y = Math.max(bird.y + velocityY, 0); 
     context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
 
     if (bird.y > board.height) {
@@ -89,7 +83,7 @@ function update() {
         context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
 
         if (!pipe.passed && bird.x > pipe.x + pipe.width) {
-            score += 0.5; //0.5 because passing 2 pipes
+            score += 0.5;
             pipe.passed = true;
         }
 
@@ -100,7 +94,7 @@ function update() {
 
     //clear pipes
     while (pipeArray.length > 0 && pipeArray[0].x < -pipeWidth)     {
-        pipeArray.shift(); //removes first element from the array   
+        pipeArray.shift();   
     }
 
     //score
@@ -118,9 +112,6 @@ function placePipes() {
         return;
     }
 
-    //(0-1) * pipeHeight / 2
-    // 0 -> -128 (pipeHeight/4)
-    // 1 -> -128 - 256 (pipeHeight/4 - pipeHeight/2) = -3/4 pipeheight
     let randomPipeY = pipeY - pipeHeight/4 - Math.random()*(pipeHeight/2);
     let openingSpace = board.height/4;
 
@@ -149,7 +140,7 @@ function moveBird(e) {
     if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
         //jump
         velocityY = -6;
-
+        
         //reset
         if (gameOver) {
             bird.y = birdY;
