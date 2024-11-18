@@ -25,11 +25,10 @@ window.onload = function() {
     board = document.getElementById("board");
     board.height = rows * blockSize;
     board.width = cols * blockSize;
-    context = board.getContext("2d") //draws the board
+    context = board.getContext("2d") 
 
     placeFood();
     document.addEventListener("keyup", changeDirection);
-    //update();
     setInterval(update, 1000/10);
 }
 
