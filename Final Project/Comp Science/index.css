@@ -1,53 +1,68 @@
 body {
-    background-color: cadetblue;
-    text-decoration: none;
-    color: blue;
-  }
-  
-  a, a:link {
-    border-color: mediumpurple;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 10px;
-    transition: all 1s ease;
-  }
-  
-  a:hover {
-    color: #ff4500;
-  }
-  
-  a:visited, a:active {
-    color: #800080;
-  }
-  
-  img {
-    width: 200px;
-  }
-  
-  .wordle, .flappy-bird, .blackjack, .snake, .twozerofoureight {
-    border-style: solid;
-  }
-  
-  .wordle {
-    border-color: #6cab64;
-    background-color: #304c68;
-    color: #cab456;
-  }
-  
-  .flappy-bird {
-    border-color: #32c008;
-    background-color: #a07098;
-    color: #317f0c;
-  }
-  
-  .snake {
-    border-color: #67c23c;
-    background-color: #11200a;
-    color: #a3c39c;
-  }
-  
-  .twozerofoureight {
-    border-color: #e0cc46;
-    background-color: #f5603f;
-    color: #7e1c06;
-  }
+  background-color: cadetblue;
+  text-decoration: none;
+  color: blue;
+  font-family: Calibri, sans-serif;
+}
+
+a, a:link {
+  border-color: mediumpurple;
+  border-width: 2px;
+  border-radius: 10px;
+  transition: all 1s ease;
+}
+
+a:visited {
+  color: #800080;
+}
+
+a:hover {
+  color: #ff4500;
+}
+
+a:active {
+  color: #800080;
+}
+
+img {
+  width: 200px;
+}
+
+h6 {
+  color: gray;
+}
+
+a, a:link, .wordle, .flappy-bird, .minesweeper, .snake, .twozerofoureight, .blackjack {
+  border-style: solid;
+  border-width: 4.7375px;
+}
+
+.wordle {
+  border-color: #6cab64;
+  background-color: #304c68;
+  color: #cab456;
+}
+
+.flappy-bird {
+  border-color: #32c008;
+  background-color: #a07098;
+  color: #317f0c;
+}
+
+.snake {
+  border-color: #67c23c;
+  background-color: #11200a;
+  color: #a3c39c;
+}
+
+.twozerofoureight {
+  border-color: #e0cc46;
+  background-color: #f5603f;
+  color: #7e1c06;
+}
+
+.blackjack {
+  border-color: #94cdbf;
+  background-color: #6f7b7b;
+  color: #cb927c;
+}
