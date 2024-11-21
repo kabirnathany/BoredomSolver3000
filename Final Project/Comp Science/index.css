@@ -20,7 +20,7 @@ a:hover {
   color: #ff4500;
 }
 
-a:active {
+ a:active {
   color: #800080;
 }
 
@@ -65,4 +65,15 @@ a, a:link, .wordle, .flappy-bird, .minesweeper, .snake, .twozerofoureight, .blac
   border-color: #94cdbf;
   background-color: #6f7b7b;
   color: #cb927c;
+}
+
+.license a, .license:link {
+  border: none;
+  border-color: none;
+  transition: none;
+  border-radius: none;
+}
+
+#license {
+  width: 80px;
 }
