@@ -3,25 +3,21 @@ body {
   text-decoration: none;
   color: blue;
   font-family: Calibri, sans-serif;
-  text-align: justify;
 }
 
 a, a:link {
   border-color: mediumpurple;
   border-width: 2px;
+  border-style: solid;
   border-radius: 10px;
   transition: all 1s ease;
-}
-
-a:visited {
-  color: #800080;
 }
 
 a:hover {
   color: #ff4500;
 }
 
- a:active {
+a:visited, a:active {
   color: #800080;
 }
 
@@ -32,21 +28,37 @@ img {
 h6 {
   color: gray;
 }
-
-.other-attributions {
-  color: green;
+.wordle, .flappy-bird, .minesweeper, .snake, .twozerofoureight, .blackjack {
+  border-style: solid;
+  border-width: 4.7375px;
 }
 
-.green {
-  color: #6cab64;
+.wordle {
+  border-color: #6cab64;
+  background-color: #304c68;
+  color: #cab456;
 }
 
-.grey {
-  color: grey;
-  transition: all 2s ease;
-  border-radius: none;
+.flappy-bird {
+  border-color: #32c008;
+  background-color: #a07098;
+  color: #317f0c;
 }
 
-#license {
-  width: 80px;
+.snake {
+  border-color: #67c23c;
+  background-color: #11200a;
+  color: #a3c39c;
+}
+
+.twozerofoureight {
+  border-color: #e0cc46;
+  background-color: #f5603f;
+  color: #7e1c06;
+}
+
+.blackjack {
+  border-color: #94cdbf;
+  background-color: #6f7b7b;
+  color: #cb927c;
 }
